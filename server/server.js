@@ -11,17 +11,17 @@ const path = require("path");
 // const expressLoger = expressPino({logger})
 //End Logs
 
-app.use((req, res, next) => {
-        if (req.header('x-forwarded-proto') !== 'http')
-            res.redirect(`http://${req.header('host')}${req.url}`)
-        else
-            next()
-    }
-)
+// app.use((req, res, next) => {
+//         if (req.header('x-forwarded-proto') !== 'http')
+//             res.redirect(`http://${req.header('host')}${req.url}`)
+//         else
+//             next()
+//     }
+// )
 
-app.use(express.static(path.join(__dirname, '../client')));
+// app.use(express.static(path.join(__dirname, '../client')));
 
-// app.use(express.static('../../client/public'));
+app.use(express.static('./static'));
 // app.use(express.static('src'));
 
 app.use(express.urlencoded({
