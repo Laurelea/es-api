@@ -73,7 +73,7 @@ parseCookie = async function (str, callback) {
 
 router.get("/", async (req, res) => {
     console.log("Server home page")
-    res.render("<p>This is server</p>")
+    res.render("index.html")
 })
 
 router.get("/api", async (req, res) => {
