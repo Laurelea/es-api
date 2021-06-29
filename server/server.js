@@ -108,7 +108,7 @@ async function start() {
         })
         //Это сам запуск сервера:
         // server.listen(PORT, () => {
-        server.listen(PORT, "localhost", () => {
+        server.listen(process.env.PORT || 3003, () => {
             console.log(server.address(), `Server is running on port ${PORT}`)
             require('dns').lookup(require('os').hostname(), function (err, add, fam) {
                 console.log('addr: ' + add);
